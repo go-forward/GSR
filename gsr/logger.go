@@ -1,9 +1,5 @@
-# GSR
-Moving Go forward through collaboration and standards.
+package gsr
 
-## GSR-3 Logger
-
-```Go
 type Logger interface {
 	Infof(format string, v ...interface{})
 	Fatalf(format string, v ...interface{})
@@ -15,4 +11,3 @@ const (
 	LoggerLevelFatal
 	LoggerLevelPanic
 )
-```
