@@ -1,9 +1,5 @@
-# GSR
-Moving Go forward through collaboration and standards.
+package log
 
-## GSR-3 Logger
-
-```Go
 type LoggerInterface interface {
 	Debugf(format string, v ...interface{})
 	Infof(format string, v ...interface{})
@@ -19,17 +15,3 @@ type LoggerInterface interface {
 type LoggerAwareInterface interface {
 	SetLogger(logger LoggerInterface)
 }
-
-const (
-	LoggerLevelDebug     = iota
-	LoggerLevelInfo
-	LoggerLevelNotice
-	LoggerLevelWarning
-	LoggerLevelError
-	LoggerLevelCritical
-	LoggerLevelAlert
-	LoggerLevelEmergency
-	LoggerLevelPanic
-)
-
-```
