@@ -1,6 +1,14 @@
-package simplecache
+package gsr
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
+
+var (
+	SimpleCacheError                = fmt.Errorf("simplecache error")
+	SimpleCacheErrorInvalidArgument = fmt.Errorf("simplecache invalid argument")
+)
 
 type CacheInterface interface {
 	Get(key, def interface{}) (interface{}, error)
