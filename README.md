@@ -68,3 +68,17 @@ var (
 	SimpleCacheErrorInvalidArgument = fmt.Errorf("simplecache invalid argument")
 )
 ```
+
+
+### GSR-15 HTTP Server Request Handlers
+
+```Go
+
+type RequestHandleFunc func(w http.ResponseWriter, r *http.Request)
+
+
+type MiddlewareInterface interface {
+	Process(next RequestHandleFunc) RequestHandleFunc
+}
+
+```
